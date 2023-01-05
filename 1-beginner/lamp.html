@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="t-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lamp</title>
+    <style>
+      body {
+        background-color: #ff9900;
+      }
+      .lamp-item {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 auto;
+      }
+      .lamp-top {
+        background-color: #2d2d2d;
+        height: 200px;
+        width: 10px;
+        top: 0;
+        z-index: 1;
+      }
+      .lamp-middle {
+        background-color: #000;
+        border-radius: 50px 50px 0 0;
+        width: 50px;
+        height: 30px;
+        top: 168px;
+        z-index: 3;
+      }
+      .lamp-bottom {
+        background-color: #2d2d2d;
+        border-radius: 100px 100px 0 0;
+        width: 150px;
+        height: 80px;
+        top: 120px;
+        z-index: 2;
+        cursor: pointer;
+      }
+      .lamp-light.open {
+        background-color: #fff;
+        clip-path: polygon(40% 0, 60% 0, 80% 100%, 20% 100%);
+        width: 700px;
+        height: 450px;
+        top: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lamp js-turnoff-btn">
+      <div class="lamp-item lamp-top"></div>
+      <div class="lamp-item lamp-middle"></div>
+      <div class="lamp-item lamp-bottom"></div>
+      <div class="lamp-item lamp-light open"></div>
+    </div>
+
+    <script>
+      document.querySelector(".lamp").addEventListener("click", () => {
+        document.querySelector(".lamp-light").classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
