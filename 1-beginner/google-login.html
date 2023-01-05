@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Login</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+        background-color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .title h1 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: #fbbc05;
+      }
+      .title span {
+        letter-spacing: -7px;
+      }
+      .title span:first-of-type,
+      .title span:nth-of-type(4) {
+        color: #1a73e8;
+      }
+      .title span:nth-of-type(2),
+      .title span:last-of-type {
+        color: #ea4335;
+      }
+      .title span:nth-of-type(5) {
+        color: #34a853;
+      }
+      .input-container {
+        width: 366px;
+        position: relative;
+      }
+      .input-text {
+        padding: 13px 15px;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #5f6368;
+        border-radius: 4px;
+        outline: none;
+        transition: all 300ms;
+        color: #202124;
+      }
+      .label {
+        position: absolute;
+        top: 14px;
+        left: 10px;
+        padding: 0 2px;
+        transition: all 200ms;
+        z-index: 1;
+      }
+      .label::before {
+        content: "";
+        height: 5px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 100%;
+        z-index: -1;
+      }
+      .input-text:focus {
+        border: 1px solid #1a73e8;
+      }
+      .input-text:focus + .label {
+        top: -8px;
+        color: #1a73e8;
+        font-size: 0.7em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>
+          <span>G</span>
+          <span>o</span>
+          <span>o</span>
+          <span>g</span>
+          <span>l</span>
+          <span>e</span>
+        </h1>
+        <p>Use sua Conta do Google</p>
+      </div>
+      <div class="input-container">
+        <input type="text" id="username" class="input-text" autocomplete="off" />
+        <label for="username" class="label">E-mail ou telefone</label>
+      </div>
+    </div>
+  </body>
+</html>
