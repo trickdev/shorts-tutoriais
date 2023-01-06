@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock Loading</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        background-color: #222;
+        place-items: center;
+      }
+      .clock {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        border: 3px solid #f9f9f9;
+        position: relative;
+      }
+      @keyframes rotateTo {
+        to {
+          transform: rotate(359deg);
+        }
+      }
+      .clock::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 29px;
+        bottom: 29px;
+        width: 2px;
+        height: 24px;
+        background-color: #f9f9f9;
+        transform-origin: 0 100%;
+        animation: rotateTo 2s infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="clock"></div>
+    </div>
+  </body>
+</html>
