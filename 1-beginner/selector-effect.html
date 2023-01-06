@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <title>Selector Effect</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100vw;
+        height: 100vh;
+        background-color: #222;
+      }
+      .description {
+        max-width: 350px;
+        color: #fff;
+      }
+      .title {
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+      .title::selection {
+        background-color: #10ff00;
+      }
+      .graph::selection {
+        background-color: #f8ff00;
+      }
+      .fa-heart {
+        color: #ea0808;
+      }
+      ::selection {
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="description">
+        <h1 class="title">TrickDev</h1>
+        <p class="graph">
+          um canal onde você pode aprender desenvolvimento front-end assistindo vídeos curtos. Inscreva-se agora
+          <i class="fas fa-heart"></i>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
