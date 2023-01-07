@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover Animation</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        place-items: center;
+        justify-content: center;
+        background-color: #222;
+      }
+      .button {
+        font: 600 30px "Arial";
+        text-transform: capitalize;
+        border: none;
+        background: none;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+      }
+      .button::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 92% 0 0 0;
+        background: #ff0044;
+        transition: all 300ms;
+      }
+      .button:hover::after {
+        inset: 0 0 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button type="button" class="button">Click me</button>
+    </div>
+  </body>
+</html>
