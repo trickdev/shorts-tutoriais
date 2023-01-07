@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spinner Load</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        place-items: center;
+        justify-content: center;
+        background-color: #222;
+      }
+      @keyframes spinnerLoad {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .spinner {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 8px solid #fff;
+        border-right-color: #ff00;
+        border-bottom: none;
+        animation: spinnerLoad 700ms linear infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="spinner"></div>
+    </div>
+  </body>
+</html>
