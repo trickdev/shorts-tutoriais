@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click 3d</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        place-items: center;
+        justify-content: center;
+        background-color: #222;
+      }
+      .button {
+        font-weight: 600;
+        font-size: 20px;
+        padding: 10px 25px;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 5px #d24444;
+        color: #000;
+        border: none;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+      }
+      .button:hover {
+        background-color: #000;
+        color: #fff;
+      }
+      .button:active {
+        transform: translateY(4px);
+        box-shadow: 0 2px #d24444;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button type="button" class="button">Login</button>
+    </div>
+  </body>
+</html>
