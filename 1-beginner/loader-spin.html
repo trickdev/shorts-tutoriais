@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loader Spin</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #222;
+        width: 100vw;
+        height: 100vh;
+      }
+      @keyframes loaderSpin {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .loader-spin {
+        width: 200px;
+        height: 200px;
+        border: 12px solid #e3e3e3;
+        border-radius: 50%;
+        border-right-color: #4070f4;
+        animation: loaderSpin 1s infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="loader-spin"></div>
+    </div>
+  </body>
+</html>
